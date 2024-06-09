@@ -1,0 +1,37 @@
+/* Define a general class for the Inter font */
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
+
+/* Apply the Inter font to all text elements */
+body {
+  margin: 0;
+  font-size: 16px; /* Adjust as needed */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Example of usage for headings */
+h1, h2, h3, h4, h5, h6 {
+  /* Adjust font size and other properties as needed */
+  font-size: 1.5em;
+  font-weight: 600;
+  /* Other styles */
+}
+
+/* Example of usage for paragraphs */
+p {
+  /* Adjust font size and other properties as needed */
+  font-size: 1em;
+  /* Other styles */
+}
+
+/* Example of usage for links */
+a {
+  /* Adjust font size and other properties as needed */
+  text-decoration: none;
+  color: #007bff; /* Adjust link color */
+  /* Other styles */
+}
+
+/* Add more specific styles as needed */
