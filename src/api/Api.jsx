@@ -1,24 +1,34 @@
 import axios from "axios";
 
 const Api = axios.create({
-    baseURL: "http://localhost:5000",
-    withCredentials: true,
-    headers:{
-        "Content-Type":"multipart/form-data"
-    } 
-})
-
-//configuration for axios 
-const config = {
-    headers :{
-        'authorization' : `Bearer ${localStorage.getItem('token')}`
+    baseURL: "http://localhost:5000", 
+    withCredentials: true,            
+    headers: {
+        "Content-Type": "application/json"
     }
-}
+});
 
-export const testApi = () => Api.get("/");
+// Forgot Password API
+export const forgotPasswordApi = (data) => Api.post("/users/forgetPassword", data);
 
-//creating register api
-export const registerApi = (data) => Api.post("/api/register", data); 
+// Reset Password API
+export const resetPasswordApi = (token, newPassword) => {
+    return Api.post(`/users/reset-password/${token}`, { newPassword });
+};
 
-// Create login api
-export const loginApi = (data) => Api.post("/api/login", data);
+// Register API
+export const registerApi = (data) => {
+    return Api.post("/users/register", data);
+};
+
+// Login API
+export const loginApi = (data) => {
+    return Api.post("/users/login", data);
+};
+
+// Example GET request
+export const testApi = () => {
+    return Api.get("/");
+};
+
+export default Api;

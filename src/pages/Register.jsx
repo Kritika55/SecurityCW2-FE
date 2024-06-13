@@ -120,7 +120,7 @@ const Registerpage = () => {
         <div className="left-content">
           <div className="text-content">
             <h2>Wheels on Lease</h2>
-            <h1>Your Perfect<br/>Ride,Just a Lease<br/>Away</h1>
+            <h1>Unlock Your <br/>Journey with Our <br/>Wheels.</h1>
             <p>Already have an account?</p>
             <p><a href="/login">Login &rarr;</a></p>
           </div>

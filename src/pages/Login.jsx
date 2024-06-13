@@ -91,7 +91,8 @@ const Login = () => {
                 />
                 Remember me
               </label>
-              <span className="forgot-password">Forgot password?</span>
+              {/* Link to the Forgot Password page */}
+              <Link to="/forget-password" className="forgot-password">Forgot password?</Link>
             </div>
 
             <button onClick={handleSubmit} className="form-button">
@@ -105,7 +106,7 @@ const Login = () => {
             <h2>Wheels on Lease</h2>
             <h1>Your Perfect<br/>Ride,Just a Lease<br/>Away</h1>
             <p>Don't have an account?</p>
-            <p><a href="/register">Create account &rarr;</a></p>
+            <p><Link to="/register">Create account &rarr;</Link></p>
           </div>
           <img src={require('../components/Assets/images/Login.png')} alt="Left Image" className="left-image" />
         </div>

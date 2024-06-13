@@ -1,9 +1,11 @@
-.body {
-  margin: 0; /* Reset default body margin */
-  background-color: black; /* Set background color to black */
+/* Reset default body margin */
+body {
+  margin: 0;
+  background-color: black;
 }
 
-.outer-container {
+/* Container for the forgot password form */
+.forgot-password-outer-container {
   display: flex;
   justify-content: center; /* Center the container horizontally */
   align-items: center; /* Center the container vertically */
@@ -11,7 +13,8 @@
   height: 100vh; /* Full height of the viewport */
 }
 
-.form-container {
+/* Container for the form and background image */
+.forgot-password-form-container {
   position: relative; /* Position relative for positioning image and form */
   width: 1440px; /* Set the width of the container */
   height: 597px; /* Set the height of the container */
@@ -23,7 +26,8 @@
   align-items: center; /* Center the login form vertically */
 }
 
-.image-container {
+/* Container for the background image */
+.forgot-password-image-container {
   position: absolute; /* Position absolute for the image */
   top: 18px; /* Set the distance from the top */
   right: 134px; /* Set the distance from the right */
@@ -35,57 +39,54 @@
   background-position: center; /* Center the background image */
 }
 
-.form-content {
+/* Styling for the form */
+.forgot-password-form-content {
   position: absolute; /* Position the form content relative to the image container */
   top: 50%; /* Move the form content 50% down from the top of the image container */
   left: 50%; /* Move the form content 50% from the left of the image container */
   transform: translate(-50%, -50%); /* Center the form content horizontally and vertically */
   width: 404px; /* Set the width of the form */
-  height: 485px; /* Set the height of the form */
+  height: 300px; /* Set the height of the form */
   padding: 40px;
   background-color: #fff; /* White background for the login form container */
   border-radius: 16px; /* Rounded corners */
 }
 
-.form-container h1 {
+/* Styling for the heading */
+.forgot-password-form-container h1 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-.form-group {
+/* Styling for form groups */
+.forgot-password-form-group {
   margin-bottom: 20px;
 }
 
-.form-label {
+/* Styling for form labels */
+.forgot-password-form-label {
   display: block;
   font-weight: bold;
 }
 
-.checkbox-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px; /* Space between checkbox and login button */
+/* Styling for input fields */
+.forgot-password-input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none; /* Remove border */
+  border-bottom: 1px solid #ccc; /* Add bottom border */
 }
 
-.checkbox-label {
-  display: flex;
-  align-items: center;
+/* Styling for error messages */
+.forgot-password-error-message {
+  color: red; /* Red color for error messages */
+  font-size: 14px; /* Font size for error messages */
+  margin-bottom: 20px; /* Space below error messages */
 }
 
-.checkbox-input {
-  margin-right: 10px;
-}
-
-/* Login.css */
-
-.forgot-password {
-  color: black; /* Blue color */
-  text-decoration: underline;
-}
-
-
-.form-button {
+/* Styling for submit button */
+.forgot-password-submit-button {
   width: 326px; /* Set width to 326px */
   height: 35px; /* Set height to 35px */
   padding: 7px 10px; /* Adjust padding */
@@ -101,37 +102,12 @@
   line-height: 25px; /* Vertically center the text */
 }
 
-
-.form-button:hover {
+.forgot-password-submit-button:hover {
   background-color: #d1b17e; /* Slightly darker yellow on hover */
 }
 
-.form-link {
-  display: block;
-  margin-top: 10px;
-  font-size: 16px;
-  text-align: center;
-  color: #555;
-}
-
-.form-link a {
-  color: red;
-  text-decoration: underline;
-}
-
-.form-link a:hover {
-  color: #ff5a5a;
-}
-
-.form-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: none; /* Remove border */
-  border-bottom: 1px solid #ccc; /* Add bottom border */
-}
-
-.left-content {
+/* Left content styling */
+.forgot-password-left-content {
   position: absolute;
   bottom: 18px; /* Align with the bottom of the right image */
   left: 139px;
@@ -139,50 +115,49 @@
   text-align: center; /* Center align the text */
 }
 
-.left-content .text-content {
+.forgot-password-left-content .forgot-password-text-content {
   margin-bottom: 10px; /* Adjust spacing as needed */
 }
 
-.left-content h2 {
+.forgot-password-left-content h2 {
   font-size: 18px;
   font-weight: 600; /* Semi-bold */
   margin: 0;
 }
 
-.left-content h1 {
+.forgot-password-left-content h1 {
   font-size: 48px; /* Bold and larger font size */
   font-weight: bold;
   margin: 10px 0;
 }
 
-.left-content p {
+.forgot-password-left-content p {
   font-size: 14px;
 }
 
-.left-content a {
+.forgot-password-left-content a {
   color: black;
   text-decoration: underline;
 }
 
-.left-image {
+.forgot-password-left-image {
   width: 461px;
   height: 211px;
   border-radius: 10px;
   margin-top: 20px; /* Add some margin to distance from text */
 }
 
-.text-content p {
+.forgot-password-text-content p {
   color: gray;
   font-size: 1.2em; /* Slightly larger font size */
 }
 
-.text-content p a {
+.forgot-password-text-content p a {
   font-weight: bold; /* Make the link bold */
   color: black; /* Keep the link color consistent with the surrounding text */
   text-decoration: none; /* Remove underline */
 }
 
-.text-content p a:hover {
+.forgot-password-text-content p a:hover {
   text-decoration: underline; /* Add underline on hover for better UX */
 }
-
