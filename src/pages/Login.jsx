@@ -59,7 +59,7 @@ const Login = () => {
     <div className="outer-container">
       <div className="form-container">
         <div className="image-container">
-          <div className="form-content">
+          <div className="form-logincontent">
             <h1>Login to your account!</h1>
             <div className="form-group">
               <label className="form-label">E-mail</label>
@@ -95,7 +95,7 @@ const Login = () => {
               <Link to="/forget-password" className="forgot-password">Forgot password?</Link>
             </div>
 
-            <button onClick={handleSubmit} className="form-button">
+            <button onClick={handleSubmit} className="form-loginbutton">
               Login
             </button>
           </div>
