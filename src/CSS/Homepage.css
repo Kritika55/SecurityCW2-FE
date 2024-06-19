@@ -1,0 +1,79 @@
+/* Homepage.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.homepage-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-page-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.full-page-slider .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Required for positioning the overlay */
+}
+
+.full-page-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.overlay h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.highlight {
+  color: yellow;
+}
+
+.content-below {
+  width: 100%;
+  height: 100vh; /* Ensure the section is full viewport height */
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Ensure the dots are properly styled */
+.slick-dots {
+  bottom: 10px; /* Position dots at the bottom */
+}
+
+.slick-dots li button:before {
+  color: white; /* Color for the dots */
+}
+
+/* Hide arrows (just to be sure they are not displayed) */
+.slick-prev, .slick-next {
+  display: none !important;
+}

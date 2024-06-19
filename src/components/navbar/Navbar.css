@@ -1,0 +1,71 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+  background-color: transparent; /* Navbar background is transparent */
+  position: fixed; /* Navbar is fixed at the top */
+  width: 100%; /* Navbar spans the entire width */
+  z-index: 1000; /* Ensures the navbar is above other content */
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo img {
+  height: 60px; /* Adjusted height */
+  width: 60px; /* Adjusted width */
+  border-radius: 50%;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: #626262;
+  font-size: 16px; /* Adjusted font size */
+  font-weight: 500;
+  margin-left: auto; /* Pushes menu items to the right */
+}
+
+.nav-menu li {
+  cursor: pointer;
+  margin-right: 100px; /* Distance between menu items */
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 3px; /* Space for the underline */
+}
+
+.nav-menu a.active {
+  border-bottom: 2px solid #FF4141;
+}
+
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Distance between logout button and other items */
+}
+
+.nav-login-cart button {
+  width: 120px; /* Adjusted button size */
+  height: 40px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 20px;
+  color: #515151;
+  font-size: 16px; /* Adjusted font size */
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+}
+
+.nav-login-cart button:active {
+  background: #f3f3f3;
+}

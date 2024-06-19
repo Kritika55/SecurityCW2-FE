@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { toast } from 'react-toastify';
 import { forgotPasswordApi } from '../api/Api';
-import '../CSS/Forgetpsw.css'; // Adjust the path as per your project structure
+import '../CSS/Forgetpsw.css'; 
 
 const ForgetPassword = () => {
   const formik = useFormik({

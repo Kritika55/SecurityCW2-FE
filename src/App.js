@@ -2,12 +2,12 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "../src/App.css";
 import Homepage from "./pages/Homepage";
 import Register from "./pages/Register";
-import Navbar from "./components/Navbar";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Login from "./pages/Login";
 import ForgetPassword from "./pages/Forgetpsw";
 import ResetPassword from "./pages/Resetpsw";
+import HomeLayout from "./components/Homelayout.js";
 
 function App() {
   return (
@@ -19,10 +19,8 @@ function App() {
         <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
 
-        {/* Routes for other pages with Navbar */}
-        <Route element={<Navbar />}>
-          <Route path="/home" element={<Homepage />} />
-        </Route>
+        {/* Route for the homepage with Navbar */}
+        <Route path="/home" element={<HomeLayout><Homepage /></HomeLayout>} />
       </Routes>
 
       {/* ToastContainer can be rendered globally */}
