@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
+import '../CSS/Register.css';
 
 const Registerpage = () => {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [agree, setAgree] = useState(false); // New state for checkbox
 
   const navigate = useNavigate();
+
+  const changeUsername = (e) => {
+    setUsername(e.target.value);
+  };
 
   const changeEmail = (e) => {
     setEmail(e.target.value);
@@ -35,12 +41,13 @@ const Registerpage = () => {
     }
 
     const data = {
+      username: username,
       email: email,
       password: password,
       confirmPassword: confirmPassword,
     };
 
-    fetch("http://localhost:5000/api/register", {
+    fetch("http://localhost:5000/api/users/register", { // Updated URL
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -63,11 +70,20 @@ const Registerpage = () => {
   };
 
   return (
-    <div className="outer-container" style={{ height: "100vh" }}> {/* Adjusted container height */}
-      <div className="form-container">
-        <div className="image-container">
-          <div className="form-content">
+    <div className="outer-container" style={{ height: "100vh" }}> 
+      <div className="register-form-container"> 
+        <div className="register-image-container">
+          <div className="register-form-content">
             <h1>Create new account!</h1>
+            <div className="form-group">
+              <label className="form-label">Username</label>
+              <input
+                onChange={changeUsername}
+                className="form-input"
+                type="text"
+                placeholder="Enter your Username"
+              />
+            </div>
             <div className="form-group">
               <label className="form-label">E-mail</label>
               <input
@@ -108,12 +124,6 @@ const Registerpage = () => {
             <button onClick={handleSubmit} className="form-button">
               Register
             </button>
-            {/* <span className="form-link">
-              Already have an account?{" "}
-              <Link to="/login" className="text-decoration-none text-red">
-                Login here
-              </Link>
-            </span> */}
           </div>
         </div>
 

@@ -1,0 +1,221 @@
+/* RegisterPage.module.css */
+
+/* Reset default body margin and set background color to black */
+body {
+  margin: 0;
+  background-color: black;
+}
+
+/* Center outer container horizontally and vertically */
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Form container styling for register page */
+.register-form-container {
+  position: relative;
+  width: 90%; /* Adjusted to 90% of the viewport width */
+  max-width: 1440px;
+  height: 90%; /* Adjusted to 80% of the viewport height */
+  max-height: 630px; /* Max height to prevent it from getting too large */
+  background-color: #fff;
+  border: 1px solid #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image container styling */
+.register-image-container {
+  position: absolute;
+  top: 18px;
+  right: 134px;
+  width: 578px;
+  height: 595px;
+  border-radius: 16px;
+  background-image: url('../components/Assets/images/Loginbg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Form content styling */
+.register-form-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 404px;
+  height: 570px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+.form-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Checkbox container styling */
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ensure it takes full width of the form */
+  margin-bottom: 20px; /* Space between checkbox and login button */
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  margin-right: 10px;
+}
+
+/* Forgot password link styling */
+.forgot-password {
+  color: #000; /* Blue color */
+  text-decoration: underline; /* Underline for clarity */
+  cursor: pointer; /* Pointer cursor for interactivity */
+}
+
+.forgot-password:hover {
+  color: #0056b3; /* Darker blue on hover */
+  font-weight: bold;
+}
+
+/* Form button styling */
+.form-button {
+  width: 200px;
+  height: 35px;
+  padding: 7px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background-color: #E8CF94;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  /* margin-top: px; */
+  text-align: center;
+  line-height: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Center the button horizontally */
+}
+
+.form-loginbutton {
+  width: 200px;
+  height: 35px;
+  padding: 7px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background-color: #E8CF94;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; /* Center the button horizontally */
+}
+
+.form-button:hover {
+  background-color: #d1b17e; /* Slightly darker yellow on hover */
+}
+
+/* Form link styling */
+.form-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #555;
+}
+
+.form-link a {
+  color: red;
+  text-decoration: underline;
+}
+
+.form-link a:hover {
+  color: #ff5a5a;
+}
+
+/* Form input styling */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none; /* Remove border */
+  border-bottom: 1px solid #ccc; /* Add bottom border */
+}
+
+/* Left content styling */
+.left-content {
+  position: absolute;
+  bottom: 18px;
+  left: 139px;
+  width: 461px;
+  text-align: center; /* Center align the text */
+}
+
+.left-content .text-content {
+  margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.left-content h2 {
+  font-size: 18px;
+  font-weight: 600; /* Semi-bold */
+  margin: 0;
+}
+
+.left-content h1 {
+  font-size: 48px; /* Bold and larger font size */
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.left-content p {
+  font-size: 14px;
+}
+
+.left-content a {
+  color: black;
+  text-decoration: underline;
+}
+
+.left-image {
+  width: 461px;
+  height: 211px;
+  border-radius: 10px;
+  margin-top: 20px; /* Add some margin to distance from text */
+}
+
+.text-content p {
+  color: gray;
+  font-size: 1.2em; /* Slightly larger font size */
+}
+
+.text-content p a {
+  font-weight: bold; /* Make the link bold */
+  color: black; /* Keep the link color consistent with the surrounding text */
+  text-decoration: none; /* Remove underline */
+}
+
+.text-content p a:hover {
+  text-decoration: underline; /* Add underline on hover for better UX */
+}

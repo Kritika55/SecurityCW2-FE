@@ -24,7 +24,7 @@ const Login = () => {
       password: password,
     };
 
-    fetch("http://localhost:5000/api/login", {
+    fetch("http://localhost:5000/api/users/login", { // Ensure this matches your backend route
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -34,8 +34,8 @@ const Login = () => {
     })
       .then((response) => response.json())
       .then((responseData) => {
+        console.log("Response Data:", responseData); // Debugging log
         if (responseData.success) {
-          console.log(responseData);
           // Save user data to local storage
           localStorage.setItem("userData", JSON.stringify(responseData.user));
           localStorage.setItem("token", responseData.token);
@@ -43,7 +43,7 @@ const Login = () => {
           // Display success message
           toast.success("Logged in successfully!");
 
-          navigate("/home"); 
+          navigate("/home");
         } else {
           toast.error(responseData.message);
         }
@@ -91,7 +91,6 @@ const Login = () => {
                 />
                 Remember me
               </label>
-              {/* Link to the Forgot Password page */}
               <Link to="/forget-password" className="forgot-password">Forgot password?</Link>
             </div>
 

@@ -3,11 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  box-shadow: 0 1px 3px -2px black;
-  background-color: transparent; /* Navbar background is transparent */
-  position: fixed; /* Navbar is fixed at the top */
-  width: 100%; /* Navbar spans the entire width */
-  z-index: 1000; /* Ensures the navbar is above other content */
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .nav-logo {
@@ -17,8 +16,8 @@
 }
 
 .nav-logo img {
-  height: 60px; /* Adjusted height */
-  width: 60px; /* Adjusted width */
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
 }
 
@@ -26,21 +25,21 @@
   display: flex;
   align-items: center;
   list-style: none;
-  color: #626262;
-  font-size: 16px; /* Adjusted font size */
+  color: white;
+  font-size: 16px;
   font-weight: 500;
-  margin-left: auto; /* Pushes menu items to the right */
+  margin-left: auto;
 }
 
 .nav-menu li {
   cursor: pointer;
-  margin-right: 100px; /* Distance between menu items */
+  margin-right: 40px; /* Adjusted margin for menu items */
 }
 
 .nav-menu a {
   text-decoration: none;
   color: inherit;
-  padding-bottom: 3px; /* Space for the underline */
+  padding-bottom: 3px;
 }
 
 .nav-menu a.active {
@@ -50,22 +49,129 @@
 .nav-login-cart {
   display: flex;
   align-items: center;
-  gap: 50px; /* Distance between logout button and other items */
+  gap: 50px;
+  position: relative;
 }
 
-.nav-login-cart button {
-  width: 120px; /* Adjusted button size */
+.logout-button,
+.login-button,
+.dropdown-button {
+  width: 120px;
   height: 40px;
   outline: none;
-  border: 1px solid #7a7a7a;
-  border-radius: 20px;
-  color: #515151;
-  font-size: 16px; /* Adjusted font size */
+  border: 1px solid #E8CF94;
+  border-radius: 100px;
+  color: white;
+  font-size: 16px;
   font-weight: 500;
-  background: white;
+  background: #E8CF94;
   cursor: pointer;
 }
 
-.nav-login-cart button:active {
+.logout-button:hover,
+.login-button:hover,
+.dropdown-button:hover {
   background: #f3f3f3;
+  color: black;
+}
+
+.dropdown-button {
+  background-color: #E8CF94;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 60px; /* Adjust based on your navbar height */
+  right: 0; /* Adjust based on your navbar layout */
+  width: 308px;
+  height: auto; /* Adjust to content */
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1001;
+}
+
+.nav-login-cart:hover .dropdown-menu {
+  display: block;
+}
+
+.user-profile {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Ensure icon and text are aligned */
+}
+
+.user-profile svg {
+  margin-right: 15px; /* Spacing between icon and text */
+}
+
+.dropdown-menu ul {
+  padding: 0;
+  margin: 0; /* Reset default margin */
+}
+
+.dropdown-menu li {
+  margin-bottom: 15px; /* Increased margin between items */
+  list-style: none; /* Remove default bullet points */
+}
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center; /* Center icon and text vertically */
+  color: black;
+  text-decoration: none;
+}
+
+/* Spacing for all icons in the dropdown menu */
+.dropdown-menu li a svg {
+  margin-right: 15px; /* Add spacing between icon and text */
+}
+
+/* Specific adjustments for Logout */
+.dropdown-menu li:last-child svg {
+  margin-right: 15px; /* Ensure logout icon has correct spacing */
+}
+
+/* Specific adjustments for Email and Profile */
+.user-profile svg,
+.dropdown-menu li a svg {
+  margin-right: 15px; /* Ensure email and profile icons have correct spacing */
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+  border-radius: 12px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .nav-login-cart {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dropdown-menu li {
+    margin-bottom: 10px; /* Adjusted margin for mobile view */
+  }
 }

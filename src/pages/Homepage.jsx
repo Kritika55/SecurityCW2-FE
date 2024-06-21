@@ -26,7 +26,7 @@ const Homepage = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false, // Disable arrows
+    arrows: false,
   };
 
   return (
@@ -36,13 +36,13 @@ const Homepage = () => {
           <div className="slide">
             <img src={SliderImage1} alt="Slider 1" className="full-page-image" />
             <div className="overlay">
-              <h1><span className="highlight">Your Journey</span> our wheels</h1>
+              <h1>Your <span className="highlight">Journey</span><br />Our Wheels!</h1>
             </div>
           </div>
           <div className="slide">
             <img src={SliderImage2} alt="Slider 2" className="full-page-image" />
             <div className="overlay">
-              <h1><span className="highlight">Adventure</span> is just a rental away</h1>
+              <h1><span className="highlight">Adventure </span>is just<br /> a Rental Away!</h1>
             </div>
           </div>
         </Slider>
