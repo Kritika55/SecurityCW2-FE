@@ -1,0 +1,87 @@
+.booking-card {
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+  padding: 40px 20px; /* Increase padding for bigger size */
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  position: absolute; /* Ensure it's positioned correctly */
+  top: 50%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  z-index: 10;
+  width: 80%;
+  max-width: 1000px; /* Adjust width as needed */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.booking-card:hover {
+  background-color: rgba(255, 255, 255, 1); /* White background on hover */
+}
+
+.booking-card h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.booking-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* To handle responsive design */
+}
+
+.input-container {
+  position: relative;
+  flex: 1;
+  margin-right: 10px;
+  /* margin-bottom: 10px; Add some space between rows */
+}
+
+.location-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.location-input {
+  padding-right: 30px; /* Add space for the icon */
+}
+
+.booking-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #E8CF94; /* Updated color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px; /* Ensure the button has space from inputs */
+}
+
+.search-btn:hover {
+  background-color: #c6b285; /* Slightly darker shade for hover effect */
+}
+
+@media (max-width: 768px) {
+  .booking-card-content {
+    flex-direction: column; /* Stack inputs on smaller screens */
+    align-items: stretch;
+  }
+
+  .input-container {
+    margin-right: 0;
+  }
+
+  .search-btn {
+    margin-top: 20px; /* Add more space for button on smaller screens */
+  }
+}

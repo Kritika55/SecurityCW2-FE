@@ -1,11 +1,11 @@
 /* Reset default body margin and set background color to black */
 body {
   margin: 0;
-  background-color: black;
+  background-color: white;
 }
 
 /* Center outer container horizontally and vertically */
-.outer-container {
+.login-outer-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,12 +14,13 @@ body {
 }
 
 /* Form container styling */
-.form-container {
+.login-form-container {
   position: relative;
-  width: 1440px;
-  height: 597px;
+  width: 90%;
+  max-width: 1440px;
+  height: 90%;
+  max-height: 630px;
   background-color: #fff;
-  border: 1px solid #000;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -27,12 +28,12 @@ body {
 }
 
 /* Image container styling */
-.image-container {
+.login-image-container {
   position: absolute;
   top: 18px;
-  right: 134px;
+  right: 15px;
   width: 578px;
-  height: 560px;
+  height: 650px;
   border-radius: 16px;
   background-image: url('../components/Assets/images/Loginbg.jpg');
   background-size: cover;
@@ -40,22 +41,22 @@ body {
 }
 
 /* Form content styling */
-.form-content {
+.login-form-content {
   position: absolute;
-  top: 50%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 404px;
-  height: 485px;
+  height: 570px;
   padding: 40px;
   background-color: #fff;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center;
 }
 
-.form-logincontent {
+.login-form-logincontent {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -67,82 +68,81 @@ body {
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center;
 }
 
-.form-container h1 {
+.login-form-container h1 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
-.form-group {
-  width: 100%; /* Ensure form inputs take full width */
+.login-form-group {
+  width: 100%;
   margin-bottom: 20px;
 }
 
-.form-label {
+.login-form-label {
   display: block;
   font-weight: bold;
 }
 
 /* Checkbox container styling */
-.checkbox-container {
+.login-checkbox-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Ensure it takes full width of the form */
-  margin-bottom: 20px; /* Space between checkbox and login button */
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.checkbox-label {
+.login-checkbox-label {
   display: flex;
   align-items: center;
 }
 
-.checkbox-input {
+.login-checkbox-input {
   margin-right: 10px;
 }
 
 /* Forgot password link styling */
-.forgot-password {
-  color: #000; /* Blue color */
-  text-decoration: underline; /* Underline for clarity */
-  cursor: pointer; /* Pointer cursor for interactivity */
+.login-forgot-password {
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.forgot-password:hover {
-  color: #0056b3; /* Darker blue on hover */
+.login-forgot-password:hover {
+  color: #0056b3;
   font-weight: bold;
 }
 
 /* Form button styling */
-.form-button {
+.login-form-button {
   width: 200px;
   height: 35px;
   padding: 7px 10px;
   font-size: 18px;
   font-weight: bold;
   color: black;
-  background-color: #E8CF94;
+  background-color: #e8cf94;
   border: none;
   border-radius: 13px;
   cursor: pointer;
-  /* margin-top: px; */
   text-align: center;
   line-height: 25px;
   display: block;
   margin-left: auto;
-  margin-right: auto; /* Center the button horizontally */
+  margin-right: auto;
 }
 
-.form-loginbutton {
+.login-form-loginbutton {
   width: 200px;
   height: 35px;
   padding: 7px 10px;
   font-size: 18px;
   font-weight: bold;
   color: black;
-  background-color: #E8CF94;
+  background-color: #e8cf94;
   border: none;
   border-radius: 13px;
   cursor: pointer;
@@ -151,15 +151,15 @@ body {
   line-height: 25px;
   display: block;
   margin-left: auto;
-  margin-right: auto; /* Center the button horizontally */
+  margin-right: auto;
 }
 
-.form-button:hover {
-  background-color: #d1b17e; /* Slightly darker yellow on hover */
+.login-form-button:hover {
+  background-color: #d1b17e;
 }
 
 /* Form link styling */
-.form-link {
+.login-form-link {
   display: block;
   margin-top: 10px;
   font-size: 16px;
@@ -167,76 +167,69 @@ body {
   color: #555;
 }
 
-.form-link a {
+.login-form-link a {
   color: red;
   text-decoration: underline;
 }
 
-.form-link a:hover {
+.login-form-link a:hover {
   color: #ff5a5a;
 }
 
 /* Form input styling */
-.form-input {
+.login-form-input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: none; /* Remove border */
-  border-bottom: 1px solid #ccc; /* Add bottom border */
+  border: none;
+  border-bottom: 1px solid #ccc;
 }
 
 /* Left content styling */
-.left-content {
+.login-left-content {
   position: absolute;
   bottom: 18px;
-  left: 139px;
-  width: 461px;
-  text-align: center; /* Center align the text */
+  left: 10px;
+  width: 700px;
+  height: 500px;
+  text-align: center;
 }
 
-.left-content .text-content {
-  margin-bottom: 10px; /* Adjust spacing as needed */
+.login-text-content {
+  margin-bottom: 10px;
 }
 
-.left-content h2 {
-  font-size: 18px;
-  font-weight: 600; /* Semi-bold */
+.login-text-content h2 {
+  font-size: 25px;
+  font-weight: 600;
   margin: 0;
 }
 
-.left-content h1 {
-  font-size: 48px; /* Bold and larger font size */
+.login-text-content h1 {
+  font-size: 50px;
   font-weight: bold;
   margin: 10px 0;
 }
 
-.left-content p {
-  font-size: 14px;
+.login-text-content p {
+  font-size: 20px;
+  color: gray;
 }
 
-.left-content a {
+.login-text-content p a {
+  font-weight: bold;
   color: black;
+  text-decoration: none;
+}
+
+.login-text-content p a:hover {
   text-decoration: underline;
 }
 
-.left-image {
+/* Left image styling */
+.login-left-image {
   width: 461px;
   height: 211px;
   border-radius: 10px;
-  margin-top: 20px; /* Add some margin to distance from text */
-}
-
-.text-content p {
-  color: gray;
-  font-size: 1.2em; /* Slightly larger font size */
-}
-
-.text-content p a {
-  font-weight: bold; /* Make the link bold */
-  color: black; /* Keep the link color consistent with the surrounding text */
-  text-decoration: none; /* Remove underline */
-}
-
-.text-content p a:hover {
-  text-decoration: underline; /* Add underline on hover for better UX */
+  margin-top: 20px;
 }

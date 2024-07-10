@@ -1,0 +1,107 @@
+.footer {
+    background-color: #E8CF94;
+    padding: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1500px; /* Define the maximum width of the container */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 100px; /* Adjust gap between logo and contact us section */
+  }
+  
+  .footer-logo {
+    max-width: 100px; /* Make the logo smaller */
+    margin-bottom: 10px;
+    margin-left: 30px;
+  }
+  
+  .footer-socials {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+    margin-left: 30px;
+  }
+  
+  .footer-socials a {
+    color: #000;
+    font-size: 1.5rem;
+  }
+  
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 40px;
+  }
+  
+  .footer-right nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px; /* More spacing between nav and subscribe form */
+    margin-right: 50px;
+  }
+  
+  .footer-right nav a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+  }
+  
+  .footer-right nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+  }
+  
+  .footer-right nav a:hover::after {
+    width: 100%;
+  }
+  
+  .footer-subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.3rem; /* Increase font size of footer-subscribe */
+    margin-top: 80px; /* Gap between footer-right and subscribe form */
+    margin-left: 100px;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    margin-right: 100px;
+    /* align-items: center; */
+    gap: 0px;
+  }
+  
+  .subscribe-form input {
+    padding: 10px;
+    flex: 1; /* Adjust the width of the input field */
+    width: 350px;
+  }
+  
+  .subscribe-form button {
+    padding: 10px 20px;
+    background-color: #A47300;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #845E00;
+  }
+  

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import "../CSS/Login.css";
+import "../../CSS/Login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -43,7 +43,7 @@ const Login = () => {
           // Display success message
           toast.success("Logged in successfully!");
 
-          navigate("/home");
+          navigate("/");
         } else {
           toast.error(responseData.message);
         }
@@ -56,58 +56,58 @@ const Login = () => {
   };
 
   return (
-    <div className="outer-container">
-      <div className="form-container">
-        <div className="image-container">
-          <div className="form-logincontent">
+    <div className="login-outer-container">
+      <div className="login-form-container">
+        <div className="login-image-container">
+          <div className="login-form-logincontent">
             <h1>Login to your account!</h1>
-            <div className="form-group">
-              <label className="form-label">E-mail</label>
+            <div className="login-form-group">
+              <label className="login-form-label">E-mail</label>
               <input
                 onChange={changeEmail}
-                className="form-input"
+                className="login-form-input"
                 type="email"
                 placeholder="Enter your Email"
                 value={email}
               />
             </div>
           
-            <div className="form-group">
-              <label className="form-label">Password</label>
+            <div className="login-form-group">
+              <label className="login-form-label">Password</label>
               <input
                 onChange={changePassword}
-                className="form-input"
+                className="login-form-input"
                 type="password"
                 placeholder="Enter your password"
                 value={password}
               />
             </div>
 
-            <div className="checkbox-container">
-              <label className="checkbox-label">
+            <div className="login-checkbox-container">
+              <label className="login-checkbox-label">
                 <input
                   type="checkbox"
-                  className="checkbox-input"
+                  className="login-checkbox-input"
                 />
                 Remember me
               </label>
-              <Link to="/forget-password" className="forgot-password">Forgot password?</Link>
+              <Link to="/forget-password" className="login-forgot-password">Forgot password?</Link>
             </div>
 
-            <button onClick={handleSubmit} className="form-loginbutton">
+            <button onClick={handleSubmit} className="login-form-loginbutton">
               Login
             </button>
           </div>
         </div>
 
-        <div className="left-content">
-          <div className="text-content">
+        <div className="login-left-content">
+          <div className="login-text-content">
             <h2>Wheels on Lease</h2>
-            <h1>Your Perfect<br/>Ride,Just a Lease<br/>Away</h1>
+            <h1>Your Perfect Ride,<br/> Just a Lease Away</h1>
             <p>Don't have an account?</p>
             <p><Link to="/register">Create account &rarr;</Link></p>
           </div>
-          <img src={require('../components/Assets/images/Login.png')} alt="Left Image" className="left-image" />
+          <img src={require('../../components/Assets/images/Login.png')} alt="Left Image" className="login-left-image" />
         </div>
       </div>
     </div>

@@ -7,6 +7,12 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-bg {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-logo {
@@ -25,7 +31,7 @@
   display: flex;
   align-items: center;
   list-style: none;
-  color: white;
+  color: black;
   font-size: 16px;
   font-weight: 500;
   margin-left: auto;
@@ -33,7 +39,7 @@
 
 .nav-menu li {
   cursor: pointer;
-  margin-right: 40px; /* Adjusted margin for menu items */
+  margin-right: 40px;
 }
 
 .nav-menu a {
@@ -43,7 +49,7 @@
 }
 
 .nav-menu a.active {
-  border-bottom: 2px solid #FF4141;
+  border-bottom: 2px solid #ff4141;
 }
 
 .nav-login-cart {
@@ -59,12 +65,12 @@
   width: 120px;
   height: 40px;
   outline: none;
-  border: 1px solid #E8CF94;
+  border: 1px solid #e8cf94;
   border-radius: 100px;
   color: white;
   font-size: 16px;
   font-weight: 500;
-  background: #E8CF94;
+  background: #e8cf94;
   cursor: pointer;
 }
 
@@ -76,7 +82,7 @@
 }
 
 .dropdown-button {
-  background-color: #E8CF94;
+  background-color: #e8cf94;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -87,10 +93,10 @@
 
 .dropdown-menu {
   position: absolute;
-  top: 60px; /* Adjust based on your navbar height */
-  right: 0; /* Adjust based on your navbar layout */
+  top: 60px;
+  right: 0;
   width: 308px;
-  height: auto; /* Adjust to content */
+  height: auto;
   background-color: white;
   color: black;
   padding: 20px;
@@ -109,44 +115,32 @@
   padding-bottom: 10px;
   margin-bottom: 10px;
   display: flex;
-  align-items: center; /* Ensure icon and text are aligned */
+  align-items: center;
 }
 
 .user-profile svg {
-  margin-right: 15px; /* Spacing between icon and text */
+  margin-right: 15px;
 }
 
 .dropdown-menu ul {
   padding: 0;
-  margin: 0; /* Reset default margin */
+  margin: 0;
 }
 
 .dropdown-menu li {
-  margin-bottom: 15px; /* Increased margin between items */
-  list-style: none; /* Remove default bullet points */
+  margin-bottom: 15px;
+  list-style: none;
 }
 
 .dropdown-menu li a {
   display: flex;
-  align-items: center; /* Center icon and text vertically */
+  align-items: center;
   color: black;
   text-decoration: none;
 }
 
-/* Spacing for all icons in the dropdown menu */
 .dropdown-menu li a svg {
-  margin-right: 15px; /* Add spacing between icon and text */
-}
-
-/* Specific adjustments for Logout */
-.dropdown-menu li:last-child svg {
-  margin-right: 15px; /* Ensure logout icon has correct spacing */
-}
-
-/* Specific adjustments for Email and Profile */
-.user-profile svg,
-.dropdown-menu li a svg {
-  margin-right: 15px; /* Ensure email and profile icons have correct spacing */
+  margin-right: 15px;
 }
 
 .dropdown-menu li:hover {
@@ -154,7 +148,6 @@
   border-radius: 12px;
 }
 
-/* Responsive styling */
 @media (max-width: 768px) {
   .nav-menu {
     flex-direction: column;
@@ -172,6 +165,6 @@
   }
 
   .dropdown-menu li {
-    margin-bottom: 10px; /* Adjusted margin for mobile view */
+    margin-bottom: 10px;
   }
 }
