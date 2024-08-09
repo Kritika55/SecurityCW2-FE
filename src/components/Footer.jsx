@@ -46,7 +46,7 @@ const Footer = () => {
                 <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8"/>
                 <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center">© 2024 <Link
-              to="https://flowbite.com/" className="hover:underline">Wheels On Lease™</Link>. All Rights Reserved.
+              to="https://flowbite.com/" className="hover:underline">HandCrafted Gems™</Link>. All Rights Reserved.
           </span>
                     <div className="flex mt-4 gap-5 sm:mt-0">
                         <Link to="#" className="hover:text-gray-900">
