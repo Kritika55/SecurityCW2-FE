@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Ensure you import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import { toast } from 'react-toastify'; 
 import Hero from "../components/Hero";
 import Vehicles from "../components/Vehicles";
