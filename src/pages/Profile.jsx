@@ -39,8 +39,6 @@ const ProfilePage = () => {
     const handleUpdateProfile = async (event) => {
         event.preventDefault();
         try {
-            // Assuming additional profile update logic here
-            // e.g., updating username or email
             await axios.put('/api/profile', {
                 username: user.username,
                 email: user.email,
