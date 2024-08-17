@@ -4,7 +4,7 @@ import { toast } from 'react-toastify'; // Correctly import toast as a named exp
 import Hero from "../components/Hero";
 import Vehicles from "../components/Vehicles";
 import About from "../components/About";
-import { checkSessionApi } from '../api/api'; // Import the function to check session
+import { checkSessionApi } from '../api/api'; 
 
 const Home = () => {
     const navigate = useNavigate();
