@@ -11,7 +11,7 @@ const OtpVerification = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const email = location.state?.email;  // Retrieve email from navigation state
+    const email = location.state?.email;  
 
     fetch("https://localhost:5000/api/users/verify-otp", {
       method: "POST",
