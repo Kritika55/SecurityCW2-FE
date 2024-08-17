@@ -17,7 +17,7 @@ const Navbar = ({ cartItemCount }) => {
         if (confirmLogout) {
             localStorage.clear();
             navigate("/login");
-            window.location.reload(); // Reload the page after logging out
+            window.location.reload(); 
         }
     };
 
