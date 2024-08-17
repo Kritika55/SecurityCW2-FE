@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Ensure you import useNavigate
-import { toast } from 'react-toastify'; // Correctly import toast as a named export
+import { toast } from 'react-toastify'; 
 import Hero from "../components/Hero";
 import Vehicles from "../components/Vehicles";
 import About from "../components/About";
