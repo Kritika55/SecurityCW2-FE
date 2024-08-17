@@ -30,7 +30,7 @@ const OtpVerification = () => {
       .then((responseData) => {
         if (responseData.success) {
           toast.success("OTP verification successful!");
-          navigate("/login");  // Or wherever you want to navigate after successful verification
+          navigate("/login");  
         } else {
           toast.error(responseData.message || "OTP verification failed.");
         }
