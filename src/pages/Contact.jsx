@@ -134,7 +134,7 @@ const Contact = () => {
                                         Email Address
                                     </h4>
                                     <p className="text-base text-body-color">
-                                        info@Handcraftedgems.com
+                                        info@wheelsonlease.com
                                     </p>
                                 </div>
                             </div>

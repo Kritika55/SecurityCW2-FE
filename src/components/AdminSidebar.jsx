@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from "react-router-dom";
 
 const AdminSidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -63,6 +63,19 @@ const AdminSidebar = () => {
                                         d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"/>
                                 </svg>
                                 <span className="flex-1 ms-3 whitespace-nowrap">Products</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/admin/logs"
+                                  className="flex items-center p-2 text-gray-900 rounded-lg">
+                                <svg
+                                    className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                    viewBox="0 0 18 18">
+                                    <path
+                                        d="M16.5 0h-15A1.5 1.5 0 0 0 0 1.5v15A1.5 1.5 0 0 0 1.5 18h15A1.5 1.5 0 0 0 18 16.5v-15A1.5 1.5 0 0 0 16.5 0ZM9 13.5a.75.75 0 0 1-.75-.75v-2.25a.75.75 0 0 1 1.5 0v2.25a.75.75 0 0 1-.75.75ZM9 7.5a.75.75 0 0 1-.75-.75V4.5a.75.75 0 0 1 1.5 0v2.25a.75.75 0 0 1-.75.75ZM4.5 15a.75.75 0 0 1-.75-.75v-11a.75.75 0 0 1 1.5 0v11a.75.75 0 0 1-.75.75Zm9 0a.75.75 0 0 1-.75-.75v-11a.75.75 0 0 1 1.5 0v11a.75.75 0 0 1-.75.75Z"/>
+                                </svg>
+                                <span className="flex-1 ms-3 whitespace-nowrap">Logs</span>
                             </Link>
                         </li>
                     </ul>

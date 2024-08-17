@@ -5,7 +5,7 @@ let config = {
     "publicKey": myKey.publicTestKey,
     "productIdentity": "123788",
     "productName": "HandCrafted Gems",
-    "productUrl": "http://localhost:3000",
+    "productUrl": "https://localhost:3000",
     "eventHandler": {
         onSuccess(payload) {
             console.log(payload);
@@ -15,7 +15,7 @@ let config = {
                 amount: payload.amount
             };
  
-            axios.get('http://localhost:5000/api/user/payment', data)
+            axios.get('https://localhost:5000/api/user/payment', data)
                 .then(response => {
                     console.log(response.data);
                     alert("Thank you for your generosity");

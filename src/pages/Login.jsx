@@ -69,7 +69,7 @@ const Login = () => {
 
     const data = { email, password };
 
-    fetch("http://localhost:5000/api/users/login", {
+    fetch("https://localhost:5000/api/users/login", {
       method: "POST",
       headers: {
         Accept: "application/json",

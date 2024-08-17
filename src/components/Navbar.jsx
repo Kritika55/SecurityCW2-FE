@@ -90,7 +90,7 @@ const Navbar = ({ cartItemCount }) => {
                                 className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-500 md:p-0">Home</Link>
                         </li>
                         <li className="relative group">
-                            <Link to="/vehicles"
+                            <Link to="/jewelries"
                                 className="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-500 md:p-0">Jewelries</Link>
                         </li>
                         <li>

@@ -40,45 +40,54 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+  
     if (!agree) {
       toast.error("Please agree to the terms and conditions.");
       return;
     }
-
+  
     if (password !== confirmPassword) {
       toast.error("Passwords do not match!");
       return;
     }
-
+  
     const data = {
-      username: username,
-      email: email,
-      password: password,
-      confirmPassword: confirmPassword,
+      username,
+      email,
+      password,
+      confirmPassword,
     };
-
-    fetch("http://localhost:5000/api/users/register", {
+  
+    fetch("https://localhost:5000/api/users/register", { // Updated endpoint
       method: "POST",
       headers: {
-        Accept: "application/json",
+        "Accept": "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          // Handle HTTP errors
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((responseData) => {
         if (responseData.success) {
-          toast.success(responseData.message);
-          navigate("/login");
+          toast.success("Signup successful! Please verify your OTP.");
+          navigate("/verify-otp", { state: { email } });
         } else {
-          toast.error(responseData.message);
+          toast.error(responseData.message || "An error occurred during registration.");
         }
       })
       .catch((error) => {
-        toast.error("Error during registration: " + error);
+        toast.error("Error during registration: " + error.message);
       });
   };
+  
+
+  
 
   return (
     <div className="flex flex-col items-center justify-center my-10">

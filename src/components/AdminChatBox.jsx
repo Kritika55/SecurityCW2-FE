@@ -8,7 +8,7 @@ const AdminChatBox = ({chat, currentUser}) => {
     const [userData, setUserData] = useState(null);
     const senderId = chat?.members?.find((id) => id !== currentUser);
     const [messages, setMessages] = useState([]);
-    const scroll = useRef();  
+    const scroll = useRef();
 
     useEffect(() => {
         const getSenderData = async () => {
